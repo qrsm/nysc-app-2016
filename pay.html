@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pay</title>
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no"/>
+    <!--Using jQuery and jQuery UI for display effects-->
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+
+    <!--Using the hamburger menu display code-->
+    <script src="js/hamburger.js"></script>
+
+    <!--Using Media Queries, if the viewport is smaller than 700px use another stylesheet-->
+    <link rel="stylesheet" type="text/css" media="all" href="css/hamburger.css"/>
+	<link rel="stylesheet" href="css/normalize.css">
+
+    
+        <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<!--This wrapping container is used to get the width of the whole content-->
+
+<div id="container">
+
+    <!--The Hamburger Button in the Header-->
+    <header>
+        <div id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+
+    <!--The mobile navigation Markup hidden via css-->
+    <nav>
+        <ul>
+		 <li><a href="index.html">Start Page</a></li>
+             <li><a href="register.html">Register</a></li>
+             <li><a href="pay.html">Pay Now</a></li>
+           <li><a href="about_us.html">About Us</a></li>
+            <li><a href="courses.html">Our Courses</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="follow.html">Follow Us</a></li>
+            
+        </ul>
+		
+    </nav>
+
+    <!--The Layer that will be layed over the content
+    so that the content is unclickable while menu is shown-->
+    <div id="contentLayer"></div>
+
+    <!--The content of the site-->
+    <div id="content">
+      <h1 align="center">Pay</h1>
+	  <p> Would like to secure a sit for our HSSE training  ?,if you make a deposit of #1000 , you would get a whooping price reduction from #29500 to #25,000</p>
+	  <p> So you would eventually pay a balance of #24,000,after making #1000 deposit to secure a sit</p>
+	  <p>Its as easy as ABC, you can click on the "pay now" button below , you would be redirected to a webpage to make your payment </p>
+	  <p style="color:red">Please take note that you would be charged a service fee of #25,that brings your order total to #1,025,Thank You.</p>
+	  <p style="color:red">Kindly also make sure you input a valid email , when making payment , as a reciept would be sent to that email, which would be requested as an evidence of payment</p>
+	  <!-- Voguepay example code -->
+<form method='POST' action='https://voguepay.com/pay/'>
+
+<input type='hidden' name='v_merchant_id' value='6295-0038599' />
+<!-- REF OPTIONAL -->
+<input type='hidden' name='merchant_ref' value='234-567-890' />
+<input type='hidden' name='memo' value='HSSE CAMP PAYMENT ' />
+
+<!-- <input type='hidden' name='notify_url' value='http://www.mydomain.com/notification.php' /> -->
+<input type='hidden' name='success_url' value='http://www.qrsm-int.com/nysc/success.html' />
+<input type='hidden' name='fail_url' value='http://www.qrsm-int.com/nysc/failed.html' />
+
+<input type='hidden' name='developer_code' value='5728ae8acb311' />
+<input type='hidden' name='store_id' value='25' />
+
+<input type='hidden' name='total' value='1025' />
+
+<input type='image' src='imgs/pay.png' alt='Submit' />
+
+</form>
+	  
+	 
+  </div>
+</div>
+
+ 
+<!-- Beginning if facebook page code -->
+
+</body>
+</html>
